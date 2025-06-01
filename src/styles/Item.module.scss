@@ -1,0 +1,103 @@
+.item_wrapper {
+	max-width: 520px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.checkboxContainer {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	font-size: 20px;
+	font-family: 'Kanit', sans-serif;
+	color: black;
+}
+
+.checkboxInput {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background-color: transparent;
+	border-radius: 2px;
+	margin-right: 8px;
+	border: 1px solid #6c63ff;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	position: relative;
+}
+
+
+.checkmark::after {
+	content: '';
+	position: absolute;
+	display: none;
+	left: 10px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.checkboxInput:checked + .checkmark {
+	background-color: #6c63ff;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkboxInput:checked + .checkmark::after {
+	display: block;
+}
+
+.item {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 13px;
+	border-bottom: 1px solid rgba(108, 99, 255, 0.5);
+	margin-top: 17px;
+}
+
+.icons {
+	width: 62px;
+	height: 18px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.icon {
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+}
+
+.icon:hover {
+	opacity: 0.5;
+}
+
+
+.completed {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+
+.text {
+	font-size: 20px;
+	color: black;
+	font-family: 'Kanit', sans-serif;
+}
